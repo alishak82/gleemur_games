@@ -1,0 +1,117 @@
+<h3 style="color: #<%= @hexs[1] %>"> Let's play some Hangman </h3>
+
+<h2 class='game-state' style="color: #<%= @hexs[2] %>">	
+	<%= @word %>
+</h2>
+
+
+<% ('A'..'Z').each do |letter|%>
+	<button class='letter-button' data-letter="<%= letter %>" style="color: #<%= @hexs[3] %>"><%= letter %></button>
+<% end %>
+
+
+
+
+<script>
+
+  // GLOBALE ID OF GAME
+	var gameID;  // Will be needed for url  which game
+
+	// Update letter on the screen
+	function updateGameState(text){
+		$('h2.game-state').text(text);
+	}
+
+
+	// 
+	function makeGuess(guessText){
+		var gameURL = '/hangmans/' + gameID;
+
+		$.ajax({
+			method: "PATCH",
+			url: gameURL,
+			dataType: 'JSON',
+			data: {guess: guessText},
+			success: function(data){
+      	updateGameState(data.game_state);
+
+      	if (data.complete){
+      		alert('That fun you just had... thou')
+      	}
+			}
+		})
+
+	}
+
+
+	function startGame(){
+		$.ajax({
+			method: "POST",
+			url: '/hangmans',
+			dataType: 'JSON',
+			success: function(data){
+				gameID = data.id;
+				updateGameState(data.game_state);
+			}
+		})
+	}
+
+
+	$(function(){
+
+		startGame();
+
+		$('.letter-button').on('click', function(e){
+			var guessText = $(this).data('letter');
+			makeGuess(guessText);
+			$(this).remove();
+		});	
+
+	})
+
+	</script>
+	
+
+
+	<!-- // make a guess letter
+		// update number of guess left...
+		
+		
+	// IceBOX:
+		// display simlies
+		// make a guess letter
+			// update number of smilies
+		// At game over...
+			// congrats the player (option to start again)
+
+
+
+
+
+
+
+
+
+
+
+	// Make a list of possible letter
+	// display simlies
+	// get the word from the server
+	// make a guess letter
+		// update game states text with new word
+		// update the possible letter list
+		// update number of guess left...
+		// update number of smilies
+
+
+		// At game over...
+			// congrats the player (option to start again)
+
+
+
+
+
+
+
+
+ -->

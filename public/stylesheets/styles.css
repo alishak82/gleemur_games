@@ -1,0 +1,11 @@
+body {
+	background-color: orange;
+}
+
+.game-state {
+		letter-spacing: 7px;
+}
+
+.letter-button {
+		font-size: 28px; 
+}

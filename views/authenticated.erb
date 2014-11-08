@@ -1,0 +1,16 @@
+<h1>Welcome <%= @current_user.first_name %></h1>
+
+<!-- <div class="home">
+<h4><a href="/foods">See Our Menu</a></h4>
+<h4><a href="/parties">Add A Party</a></h4>
+</div> -->
+
+<form action="/sessions" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Logout">
+</form>
+
+<p>
+<form action="/games" method="get">
+  <input type="submit" value="Play A Game">
+</form>

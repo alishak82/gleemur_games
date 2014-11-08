@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Games Are Fun</title>
+	<link rel="stylesheet" href="/stylesheets/styles.css">
+  <script src='/javascripts/jquery.js'></script>
+  <script src='/javascripts/scripts.js'></script>
+</head>
+<body style="background-color: #<%= @hexs[0] %>">
+
+	
+<% if current_user %>
+	<h3>Welcome Back</h3>
+<% end %>
+	
+	<%= yield %>
+
+</body>
+</html>

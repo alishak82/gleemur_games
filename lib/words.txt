@@ -1,0 +1,124 @@
+apple
+apricot
+avocado
+banana
+berry
+blackberry
+blood orange
+blueberry
+boysenberry
+breadfruit
+cantaloupe
+cherry
+coconut
+crabapple
+cranberry
+dragonfruit
+elderberry
+fig
+grape
+grapefruit
+guava
+honeydew
+jackfruit
+kiwi
+lemon
+lime
+mandarin orange
+mango
+melon
+mulberry
+nectarine
+orange
+papaya
+passion fruit
+peach
+pear
+pineapple
+plantain
+plum
+pomegranate
+prune
+raisin
+raspberry
+star fruit
+strawberry
+tangelo
+tangerine
+watermelon
+acorn squash
+alfalfa
+artichoke
+arugula
+asparagus
+avocado
+bamboo shoots
+basil
+beans
+beets
+bell pepper
+broccoli
+capers
+carrot
+cauliflower
+celery
+chard
+chick peas
+chives
+collard greens
+cucumber
+daikon
+eggplant
+fennel
+garlic
+ginger
+greenbean
+greens
+jicama
+kale
+leek
+lentils
+lettuce
+maize
+mung bean
+mushroom
+mustard greens
+okra
+olive
+onion
+parsley
+parsnip
+pea
+peapod
+peanut
+peppers
+pickle
+potato
+pumpkin
+radish
+rhubarb
+romaine
+rutabaga
+salad
+salsa
+scallion
+seaweed
+shallot
+soybean
+spinach
+sprouts
+salsify
+spuds
+squash
+string bean
+succotash
+sweet potato
+tomatillo
+tomato
+turnip
+vegetable
+wasabi
+water chestnut
+watercress
+yam
+zucchini
