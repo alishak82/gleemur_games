@@ -14,7 +14,7 @@
 
 <script>
 
-  // GLOBALE ID OF GAME
+  // GLOBAL ID OF GAME
 	var gameID;  // Will be needed for url  which game
 
 	// Update letter on the screen
@@ -38,6 +38,12 @@
       	if (data.complete){
       		alert('That fun you just had... tho')
       	}
+
+      	if (data.bad_guesses.length > 5){
+					alert('you lost, mofo')
+					window.location = '/hangmans';
+				}
+
 			}
 		})
 
@@ -60,13 +66,12 @@
 	$(function(){
 
 		startGame();
-
 		$('.letter-button').on('click', function(e){
 			var guessText = $(this).data('letter');
 			makeGuess(guessText);
 			$(this).remove();
 		});	
-
+	
 	})
 
 	</script>
@@ -88,12 +93,6 @@
 
 
 
-
-
-
-
-
-
 	// Make a list of possible letter
 	// display simlies
 	// get the word from the server
@@ -106,11 +105,6 @@
 
 		// At game over...
 			// congrats the player (option to start again)
-
-
-
-
-
 
 
 
