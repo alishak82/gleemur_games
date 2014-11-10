@@ -19,6 +19,7 @@ require './controllers/hangman_game_controller'
 require './controllers/tic_tac_toe_controller'
 
 
+map('/tictactoe'){ run TicTacToeController }
 map('/hangmans'){ run HangmanGameController }
 map('/games'){ run GamesController }
 map('/sessions'){ run SessionsController }

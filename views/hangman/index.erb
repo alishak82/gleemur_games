@@ -36,11 +36,12 @@
       	updateGameState(data.game_state);
 
       	if (data.complete){
-      		alert('That fun you just had... tho')
+      		alert('Congrats! You Win!')
+      		window.location = '/hangmans'
       	}
 
       	if (data.bad_guesses.length > 5){
-					alert('you lost, mofo')
+					alert('You lose, try again!')
 					window.location = '/hangmans';
 				}
 
