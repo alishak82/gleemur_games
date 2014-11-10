@@ -1,8 +1,9 @@
-<h3 style="color: #<%= @hexs[4] %>"> Let's play some Hangman </h3>
+<h3 style="color: #<%= @hexs[4] %>"> Let's play Fruits and Vegetables Hangman </h3>
+<h1 style="color: #<%= @hexs[4] %>">(an image below will disappear each time you guess a letter incorrectly)<h1>
 
-<h2 class='game-state' style="color: #<%= @hexs[3] %>">	
+<h3 class='game-state' style="color: #<%= @hexs[3] %>">	
 	<%= @word %>
-</h2>
+</h3>
 
 
 <div id="alpha">
@@ -12,12 +13,14 @@
 
 </div>
 
-<div id="smiley">
-	<img id="smiley1" src="/images/2000px-Smiley.svg.png">
-	<img id="smiley2" src="/images/2000px-Smiley.svg.png">
-	<img id="smiley3" src="/images/2000px-Smiley.svg.png">
-	<img id="smiley4" src="/images/2000px-Smiley.svg.png">
-	<img id="smiley5" src="/images/2000px-Smiley.svg.png">
+
+<div id="froot">
+	<img id="froot1" src="/images/fruits/avocado-146953_640.png">
+	<img id="froot2" src="/images/fruits/strawberry-36949_640.png">
+	<img id="froot3" src="/images/fruits/grapes-34298_640.png">
+	<img id="froot4" src="/images/fruits/peppers-319381_640.png">
+	<img id="froot5" src="/images/fruits/coconut-303358_640.png">
+	<img id="froot6" src="/images/fruits/bananas-311788_640.png">
 </div>
 
 
@@ -28,8 +31,7 @@
 
 	// Update letter on the screen
 	function updateGameState(text){
-		$('h2.game-state').text(text);
-		// $('#smilies'+(data.bad_guesses.length)).hide();
+		$('h3.game-state').text(text);
 	}
 
 
@@ -44,14 +46,14 @@
 			data: {guess: guessText},
 			success: function(data){
       	updateGameState(data.game_state);
-      	$('#smiley'+(data.bad_guesses.length)).hide();
+      	$('#froot'+(data.bad_guesses.length)).hide();
 
       	if (data.complete){
       		alert('Congrats! You Win!')
       		window.location = '/hangmans'
       	}
 
-      	if (data.bad_guesses.length >= 5){
+      	if (data.bad_guesses.length >= 6){
 					alert('You lose, try again!')
 					window.location = '/hangmans';
 				}

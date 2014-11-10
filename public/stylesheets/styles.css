@@ -1,6 +1,11 @@
-body {
-	background-color: orange;
+input[type='submit']{
+	border:0;
+	width: 10em;
+	height: 5em;
+	border-radius: 25%;
+	font-size: 16px;
 }
+
 
 .game-state {
 	letter-spacing: 7px;
@@ -27,19 +32,68 @@ body {
 }
 
 .tictac img {
-	width: 250px;
-	height: auto;
+	margin-right: 100px;
+	height: 265px;
+	width: auto;
 }
 
-#smiley img {
-	width: 100px;
+/*#smiley img {
+	width: 75px;
 }
 
 #smiley {
 	margin: 50px;
-/*	float: right;*/
+	text-align: center;
+}*/
+
+#froot img {
+	width: 100px;
+}
+
+#froot {
+	margin: 50px;
+	text-align: center;
 }
 
 #alpha {
+	width: 595px;
+	margin-right: auto;
+	margin-left: auto;
+}
 
+#fruits {
+	width: 1000px;
+	height: auto;
+}
+
+#fruits img {
+	float: center;
+}
+
+#tictactoe {
+	text-align: center;
+	font-family: Trebuchet MS;
+	font-size: 36px;
+}
+
+h3 {
+	text-align: center;
+	font-size: 36px;
+}
+
+#games-images {
+	padding: 25px;
+}
+
+h1 {
+	font-size: 16px;
+	text-align: center;
+}
+
+.login {
+	font-size: 28px;
+}
+
+#message {
+	text-align: center;
 }
