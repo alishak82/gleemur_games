@@ -6,6 +6,8 @@ ActiveRecord::Base.establish_connection({
   database: 'gleemur'
   })
 
+  register Sinatra::ActiveRecordExtension
+
   set :views, File.expand_path('../../views', __FILE__)
   set :public_folder, File.expand_path('../../public', __FILE__)
 

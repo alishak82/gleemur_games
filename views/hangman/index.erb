@@ -1,15 +1,24 @@
-<h3 style="color: #<%= @hexs[1] %>"> Let's play some Hangman </h3>
+<h3 style="color: #<%= @hexs[4] %>"> Let's play some Hangman </h3>
 
-<h2 class='game-state' style="color: #<%= @hexs[2] %>">	
+<h2 class='game-state' style="color: #<%= @hexs[3] %>">	
 	<%= @word %>
 </h2>
 
 
+<div id="alpha">
 <% ('A'..'Z').each do |letter|%>
-	<button class='letter-button' data-letter="<%= letter %>" style="color: #<%= @hexs[3] %>"><%= letter %></button>
+	<button class='letter-button' data-letter="<%= letter %>" style="color: #<%= @hexs[0] %>; background-color: #<%= @hexs[4] %>"><%= letter %></button>
 <% end %>
 
+</div>
 
+<div id="smiley">
+	<img id="smiley1" src="/images/2000px-Smiley.svg.png">
+	<img id="smiley2" src="/images/2000px-Smiley.svg.png">
+	<img id="smiley3" src="/images/2000px-Smiley.svg.png">
+	<img id="smiley4" src="/images/2000px-Smiley.svg.png">
+	<img id="smiley5" src="/images/2000px-Smiley.svg.png">
+</div>
 
 
 <script>
@@ -20,6 +29,7 @@
 	// Update letter on the screen
 	function updateGameState(text){
 		$('h2.game-state').text(text);
+		// $('#smilies'+(data.bad_guesses.length)).hide();
 	}
 
 
@@ -34,13 +44,14 @@
 			data: {guess: guessText},
 			success: function(data){
       	updateGameState(data.game_state);
+      	$('#smiley'+(data.bad_guesses.length)).hide();
 
       	if (data.complete){
       		alert('Congrats! You Win!')
       		window.location = '/hangmans'
       	}
 
-      	if (data.bad_guesses.length > 5){
+      	if (data.bad_guesses.length >= 5){
 					alert('You lose, try again!')
 					window.location = '/hangmans';
 				}
@@ -50,6 +61,10 @@
 
 	}
 
+	// forEach(data.bad_guesses) {
+	// 	for (var i = 0, i < 5, i++)
+
+	// }
 
 	function startGame(){
 		$.ajax({
@@ -70,7 +85,8 @@
 		$('.letter-button').on('click', function(e){
 			var guessText = $(this).data('letter');
 			makeGuess(guessText);
-			$(this).remove();
+			// $(this).remove(); this is what i had before
+			$(this).attr("disabled", "disabled");
 		});	
 	
 	})

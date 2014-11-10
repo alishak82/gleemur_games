@@ -3,12 +3,12 @@ body {
 }
 
 .game-state {
-		letter-spacing: 7px;
+	letter-spacing: 7px;
 }
 
 .letter-button {
-		font-size: 36px;
-		font-family: Helvetica; 
+	font-size: 36px;
+	font-family: Helvetica; 
 }
 
 #board {
@@ -29,4 +29,17 @@ body {
 .tictac img {
 	width: 250px;
 	height: auto;
+}
+
+#smiley img {
+	width: 100px;
+}
+
+#smiley {
+	margin: 50px;
+/*	float: right;*/
+}
+
+#alpha {
+
 }
